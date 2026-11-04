@@ -1,0 +1,20 @@
+name: Mi primera accion
+
+#push, schedule, pull_request, workflow_dispatch
+on: push
+
+jobs:
+  ejecutar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar los repositorios
+        uses: action/checkout@v4
+
+      - name: Instalar node js 
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+    
+      - name: Ejecutar mi app
+        run: node hola.js
