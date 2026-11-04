@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Descargar los repositorios
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Instalar node js 
         uses: actions/setup-node@v4
